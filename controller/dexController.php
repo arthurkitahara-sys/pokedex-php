@@ -1,6 +1,6 @@
 <?php
-require_once 'dao/dexDAO.php';
-require_once 'model/dex.php';
+require_once __DIR__ . '/../dao/dexDAO.php';
+require_once __DIR__ . '/../model/dex.php';
 
 class DexController {
     private $dao;

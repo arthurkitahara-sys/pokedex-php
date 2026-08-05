@@ -1,6 +1,6 @@
 <?php
-require_once 'model/dex.php';
-require_once 'util/Conexao.php';
+require_once __DIR__ . '/../model/dex.php';
+require_once __DIR__ . '/../util/Conexao.php';
 
 class DexDAO {
 

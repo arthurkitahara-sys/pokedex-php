@@ -1,5 +1,5 @@
 <?php
-require_once 'controller/dexController.php';
+require_once '../controller/dexController.php';
 $controller = new DexController();
 
 $numero = $_GET['numero'] ?? 0;
@@ -13,7 +13,7 @@ if (!$pokemon) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_POST['id'] = $pokemon->id;
     $controller->atualizarPokemon($_POST);
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit;
 }
 ?>
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
 <meta charset="UTF-8">
 <title>Editar Pokémon</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <h1>Editar Pokémon</h1>
@@ -59,6 +59,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <button type="submit">Atualizar</button>
 </form>
 
-<a href="index.php">Voltar</a>
+<a href="../index.php">Voltar</a>
 </body>
 </html>

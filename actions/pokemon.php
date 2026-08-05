@@ -1,5 +1,5 @@
 <?php
-require_once 'controller/dexController.php';
+require_once '../controller/dexController.php';
 $controller = new DexController();
 
 $numero = $_GET['numero'] ?? 0;
@@ -16,7 +16,7 @@ if (!$p) {
 <head>
 <meta charset="UTF-8">
 <title><?php echo htmlspecialchars($p->nome); ?> - Detalhes</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <div class="container">
@@ -31,7 +31,7 @@ if (!$p) {
         <tr><th>Região:</th><td><?php echo htmlspecialchars($p->regiao); ?></td></tr>
     </table>
     <div class="descricao"><?php echo htmlspecialchars($p->descricao); ?></div>
-    <a href="index.php">← Voltar à lista</a>
+    <a href="../index.php">← Voltar à lista</a>
 </div>
 </body>
 </html>

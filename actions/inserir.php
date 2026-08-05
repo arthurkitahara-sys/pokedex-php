@@ -1,5 +1,5 @@
 <?php
-require_once 'controller/dexController.php';
+require_once '../controller/dexController.php';
 $controller = new DexController();
 
 $erro = '';
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    
         try {
             $controller->inserirPokemon($dados);
-            header("Location: index.php");
+            header("Location: ../index.php");
             exit;
         } catch (Exception $e) {
             $erro = "Erro ao inserir Pokémon: " . $e->getMessage();
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
 <meta charset="UTF-8">
 <title>Inserir Novo Pokémon</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <h1>Inserir Novo Pokémon</h1>
@@ -76,6 +76,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <button type="submit">Inserir</button>
 </form>
 
-<a href="index.php">Voltar</a>
+<a href="../index.php">Voltar</a>
 </body>
 </html>
